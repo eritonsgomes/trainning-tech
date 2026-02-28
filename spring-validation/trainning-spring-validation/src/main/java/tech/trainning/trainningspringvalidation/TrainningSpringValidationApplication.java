@@ -1,4 +1,4 @@
-package tech.trainning.springvalidation;
+package tech.trainning.trainningspringvalidation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TrainningSpringValidationApplication {
 
-	public static void main(String[] args) {
+	static void main(String[] args) {
 		SpringApplication.run(TrainningSpringValidationApplication.class, args);
 	}
 
