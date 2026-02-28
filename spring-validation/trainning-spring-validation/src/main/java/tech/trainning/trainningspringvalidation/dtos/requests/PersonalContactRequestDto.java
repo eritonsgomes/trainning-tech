@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.UUID;
 import tech.trainning.trainningspringvalidation.enums.GenderEnum;
+import tech.trainning.trainningspringvalidation.validators.GenderEnumConstraint;
 
 import java.time.LocalDate;
 
@@ -26,6 +27,7 @@ public record PersonalContactRequestDto(
         @PastOrPresent(message = "{validation.constraints.past-or-present}")
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
         LocalDate birthDate,
+        @GenderEnumConstraint
         GenderEnum gender,
         @NotNull(message = "{validation.constraints.not-null}")
         @Digits(integer = 1, fraction = 2, message = "{validation.constraints.digits}")
