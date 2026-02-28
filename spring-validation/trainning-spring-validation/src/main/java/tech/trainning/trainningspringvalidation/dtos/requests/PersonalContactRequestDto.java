@@ -4,8 +4,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.UUID;
+import tech.trainning.trainningspringvalidation.dtos.deserializers.DoubleDeserializer;
 import tech.trainning.trainningspringvalidation.enums.GenderEnum;
 import tech.trainning.trainningspringvalidation.validators.GenderEnumConstraint;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import java.time.LocalDate;
 
@@ -31,6 +33,7 @@ public record PersonalContactRequestDto(
         GenderEnum gender,
         @NotNull(message = "{validation.constraints.not-null}")
         @Digits(integer = 1, fraction = 2, message = "{validation.constraints.digits}")
+        @JsonDeserialize(using = DoubleDeserializer.class)
         Double height
 ) {
 }
