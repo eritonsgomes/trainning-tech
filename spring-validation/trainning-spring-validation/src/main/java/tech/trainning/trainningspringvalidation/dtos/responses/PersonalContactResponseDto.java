@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
 import tech.trainning.trainningspringvalidation.enums.GenderEnum;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -19,6 +18,6 @@ public record PersonalContactResponseDto(
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
         LocalDate birthDate,
         GenderEnum gender,
-        BigDecimal height
+        Double height
 ) {
 }

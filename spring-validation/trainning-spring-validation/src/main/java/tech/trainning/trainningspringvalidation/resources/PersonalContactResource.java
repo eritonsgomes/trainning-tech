@@ -1,5 +1,6 @@
 package tech.trainning.trainningspringvalidation.resources;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +24,7 @@ public class PersonalContactResource {
             produces = { MediaType.APPLICATION_JSON_VALUE }
     )
     public ResponseEntity<PersonalContactResponseDto> createContact(
-            @RequestBody PersonalContactRequestDto request
+        @Valid @RequestBody PersonalContactRequestDto request
     ) {
         return ResponseEntity.ok(service.createResponse(request));
     }
