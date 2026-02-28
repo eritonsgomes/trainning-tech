@@ -1,0 +1,76 @@
+{
+  "info": {
+    "_postman_id": "b3970060-c21b-4a50-a655-0b2fc3f42ab6",
+    "name": "Trainning",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41733303"
+  },
+  "item": [
+    {
+      "name": "Spring Validation",
+      "item": [
+        {
+          "name": "Personal Contact",
+          "item": [
+            {
+              "name": "Try Create Personal Contact",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"uuid\": \"0\",\r\n    \"name\": \"123\",\r\n    \"phoneNumber\": \"1234567.0\",\r\n    \"gender\": null,\r\n    \"height\": \"1,234\",\r\n    \"email\": \"email\",\r\n    \"birthDate\": \"21/02/2026\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/contacts",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "contacts"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Create Personal Contact",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Benedict Rhoam The Best\",\r\n    \"phoneNumber\": \"999999999\",\r\n    \"gender\": \"M\",\r\n    \"height\": \"1,65\",\r\n    \"email\": \"benedict@thebest.com\",\r\n    \"birthDate\": \"21/02/2026\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/contacts",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "contacts"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
