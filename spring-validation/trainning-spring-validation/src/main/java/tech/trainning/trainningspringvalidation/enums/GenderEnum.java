@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import tech.trainning.trainningspringvalidation.exceptions.EnumJsonParserException;
 
-import java.text.MessageFormat;
 import java.util.Objects;
 
 @AllArgsConstructor
@@ -31,7 +29,7 @@ public enum GenderEnum {
             }
         }
 
-        throw new EnumJsonParserException(MessageFormat.format(getJSONParserErrorMessage(key), key));
+        return null;
     }
 
     private static String getJSONParserErrorMessage(String key) {

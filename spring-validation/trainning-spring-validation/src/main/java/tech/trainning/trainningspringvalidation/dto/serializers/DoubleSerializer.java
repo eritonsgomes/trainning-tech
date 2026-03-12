@@ -1,4 +1,4 @@
-package tech.trainning.trainningspringvalidation.dtos.serializers;
+package tech.trainning.trainningspringvalidation.dto.serializers;
 
 
 import tools.jackson.core.JacksonException;

@@ -1,12 +1,11 @@
-package tech.trainning.trainningspringvalidation.dtos.requests;
+package tech.trainning.trainningspringvalidation.dto.requests;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.UUID;
-import tech.trainning.trainningspringvalidation.dtos.deserializers.DoubleDeserializer;
-import tech.trainning.trainningspringvalidation.enums.GenderEnum;
-import tech.trainning.trainningspringvalidation.validators.GenderEnumConstraint;
+import tech.trainning.trainningspringvalidation.dto.deserializers.DoubleDeserializer;
+import tech.trainning.trainningspringvalidation.validators.GenderConstraint;
 import tools.jackson.databind.annotation.JsonDeserialize;
 
 import java.time.LocalDate;
@@ -29,8 +28,8 @@ public record PersonalContactRequestDto(
         @PastOrPresent(message = "{validation.constraints.past-or-present}")
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
         LocalDate birthDate,
-        @GenderEnumConstraint
-        GenderEnum gender,
+        @GenderConstraint
+        String gender,
         @NotNull(message = "{validation.constraints.not-null}")
         @Digits(integer = 1, fraction = 2, message = "{validation.constraints.digits}")
         @JsonDeserialize(using = DoubleDeserializer.class)

@@ -1,9 +1,9 @@
-package tech.trainning.trainningspringvalidation.dtos.responses;
+package tech.trainning.trainningspringvalidation.dto.responses;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
-import tech.trainning.trainningspringvalidation.dtos.serializers.DoubleSerializer;
+import tech.trainning.trainningspringvalidation.dto.serializers.DoubleSerializer;
 import tech.trainning.trainningspringvalidation.enums.GenderEnum;
 import tools.jackson.databind.annotation.JsonSerialize;
 

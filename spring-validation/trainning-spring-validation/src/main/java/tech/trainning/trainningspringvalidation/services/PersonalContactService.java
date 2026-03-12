@@ -3,8 +3,9 @@ package tech.trainning.trainningspringvalidation.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tech.trainning.trainningspringvalidation.dtos.requests.PersonalContactRequestDto;
-import tech.trainning.trainningspringvalidation.dtos.responses.PersonalContactResponseDto;
+import tech.trainning.trainningspringvalidation.dto.requests.PersonalContactRequestDto;
+import tech.trainning.trainningspringvalidation.dto.responses.PersonalContactResponseDto;
+import tech.trainning.trainningspringvalidation.enums.GenderEnum;
 
 import java.util.Random;
 import java.util.UUID;
@@ -33,6 +34,7 @@ public class PersonalContactService {
                 .phoneNumber(request.phoneNumber())
                 .birthDate(request.birthDate())
                 .height(request.height())
+                .gender(GenderEnum.fromKey(request.gender()))
                 .build();
     }
 
